@@ -28,6 +28,6 @@ app.post("/contact", indexRoute)
 
 
 
-app.listen(port, function() {
+app.listen(process.env.PORT || port, function() {
     console.log('Server has started sucessfully on port',port);
   });
