@@ -1,3 +1,8 @@
+// File name: index.js
+// Name: Johnson Ejeh
+// StudentID: 300865958
+// Date: September 27th 2023
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
