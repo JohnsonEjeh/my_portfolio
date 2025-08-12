@@ -6,8 +6,6 @@
 <%- include('partials/header') %>
 
 <main id="main">
-
-  <!-- ======= Services Section ======= -->
   <section id="services" class="services">
     <div class="container" data-aos="fade-up">
 
@@ -15,103 +13,134 @@
         <h2>Projects</h2>
       </div>
 
-      <div class="row">
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-          <div class="icon-box iconbox-blue">
+      <!-- helper CSS specific to this section -->
+      <style>
+        .icon-box {
+          padding: 24px;
+          border-radius: 16px;
+          background: #fff;
+          box-shadow: 0 10px 30px rgba(0,0,0,.06);
+        }
+        .icon-box .icon { margin-bottom: 12px; }
+        .line-clamp {
+          display: -webkit-box;
+          -webkit-line-clamp: 4;       /* show 4 lines, then ellipsis */
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+        .tech-tags .badge {
+          margin: 2px 4px 0 0;
+          font-weight: 500;
+        }
+      </style>
+
+      <div class="row g-4">
+
+        <!-- QuickCart -->
+        <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+          <div class="icon-box iconbox-blue h-100 d-flex flex-column">
             <div class="icon">
               <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,521.0016835830174C376.1290562159157,517.8887921683347,466.0731472004068,529.7835943286574,510.70327084640275,468.03025145048787C554.3714126377745,407.6079735673963,508.03601936045806,328.9844924480964,491.2728898941984,256.3432110539036C474.5976632858925,184.082847569629,479.9380746630129,96.60480741107993,416.23090153303,58.64404602377083C348.86323505073057,18.502131276798302,261.93793281208167,40.57373210992963,193.5410806939664,78.93577620505333C130.42746243093433,114.334589627462,98.30271207620316,179.96522072025542,76.75703585869454,249.04625023123273C51.97151888228291,328.5150500222984,13.704378332031375,421.85034740162234,66.52175969318436,486.19268352777647C119.04800174914682,550.1803526380478,217.28368757567262,524.383925680826,300,521.0016835830174"></path>
+                <path fill="#f5f5f5" d="M300,521.0C376.1,517.9,466.1,529.8,510.7,468.0C554.4,407.6,508.0,329.0,491.3,256.3C474.6,184.1,479.9,96.6,416.2,58.6C348.9,18.5,261.9,40.6,193.5,78.9C130.4,114.3,98.3,180.0,76.8,249.0C52.0,328.5,13.7,421.9,66.5,486.2C119.0,550.2,217.3,524.4,300,521.0"></path>
               </svg>
-              <i class="bi bi-piggy-bank-fill"></i>
+              <i class="bi bi-bag-check-fill"></i>
             </div>
-            <h4><a href="">QuickCart</a></h4>
-      <p>QuickCart is a modern e-commerce backend platform I built using <strong>FastAPI</strong> and <strong>Uvicorn</strong> in a microservices architecture. The system is divided into dedicated services for authentication, product management, orders, payments, and notifications, each communicating asynchronously via <strong>Apache Kafka</strong> for fault-tolerant, event-driven workflows. Leveraging <strong>Docker</strong> and <strong>docker-compose</strong>, the entire stack is containerized for consistent deployment and scalability.</p>
-      <p>Security is implemented with <strong>python-jose</strong> for JWT-based authentication and <strong>Passlib</strong> (bcrypt) for password hashing. <strong>SQLAlchemy</strong> and <strong>PostgreSQL</strong> handle data persistence with clear, maintainable ORM models. I used <strong>Pydantic</strong> for strict data validation and <strong>python-multipart</strong> for handling file uploads where needed. The result is a secure, high-performance backend capable of supporting real-world e-commerce operations with minimal latency and robust scalability.</p>
-
-        </div>
-
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
-          <div class="icon-box iconbox-orange ">
-            <div class="icon">
-              <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,582.0697525312426C382.5290701553225,586.8405444964366,449.9789794690241,525.3245884688669,502.5850820975895,461.55621195738473C556.606425686781,396.0723002908107,615.8543463187945,314.28637112970534,586.6730223649479,234.56875336149918C558.9533121215079,158.8439757836574,454.9685369536778,164.00468322053177,381.49747125262974,130.76875717737553C312.15926192815925,99.40240125094834,248.97055460311594,18.661163978235184,179.8680185752513,50.54337015887873C110.5421016452524,82.52863877960104,119.82277516462835,180.83849132639028,109.12597500060166,256.43424936330496C100.08760227029461,320.3096726198365,92.17705696193138,384.0621239912766,124.79988738764834,439.7174275375508C164.83382741302287,508.01625554203684,220.96474134820875,577.5009287672846,300,582.0697525312426"></path>
-              </svg>
-              <i class="bi bi-blockquote-right"></i>
-            </div>
-            <h4><a href="https://github.com/JohnsonEjeh/Ejeh-blog">Ejeh Blog</a></h4>
-            <p>I'm excited to present my Blog Web App, a dynamic platform created using Python, Flask, Jinja2, and an SQL database. This project reflects my passion for developing web applications with an exceptional user interface, robust authentication features, and efficient database management. With a user-friendly design, seamless authentication, and a structured database, it ensures a delightful blogging experience for both creators and readers. Through this project, I've honed my skills in Python web development while prioritizing aesthetics and data integrity. Explore this project to witness my commitment to crafting engaging and secure web solutions.</p>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
-          <div class="icon-box iconbox-pink">
-            <div class="icon">
-              <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,541.5067337569781C382.14930387511276,545.0595476570109,479.8736841581634,548.3450877840088,526.4010558755058,480.5488172755941C571.5218469581645,414.80211281144784,517.5187510058486,332.0715597781072,496.52539010469104,255.14436215662573C477.37192572678356,184.95920475031193,473.57363656557914,105.61284051026155,413.0603344069578,65.22779650032875C343.27470386102294,18.654635553484475,251.2091493199835,5.337323636656869,175.0934190732945,40.62881213300186C97.87086631185822,76.43348514350839,51.98124368387456,156.15599469081315,36.44837278890362,239.84606092416172C21.716077023791087,319.22268207091537,43.775223500013084,401.1760424656574,96.891909868211,461.97329694683043C147.22146801428983,519.5804099606455,223.5754009179313,538.201503339737,300,541.5067337569781"></path>
-              </svg>
-              <i class="bi bi-joystick"></i>
-            </div>
-           <h4><a href="">Patient Management</a></h4>
-            <p>Patient Management is a distributed healthcare backend platform built with a <strong>microservices architecture</strong> to handle patient data, billing, analytics, and secure authentication. The system includes dedicated services such as <strong>Auth</strong>, <strong>Patient</strong>, <strong>Billing</strong>, <strong>Analytics</strong>, and an <strong>API Gateway</strong> for centralized routing and security. Services communicate via both <strong>gRPC</strong> and <strong>Apache Kafka</strong>, enabling real-time, fault-tolerant, and event-driven workflows across the platform. </p>
-            <p>All services are containerized with <strong>Docker</strong> and orchestrated through <strong>docker-compose</strong>, with databases deployed as Docker images for quick setup and consistent environments. <strong>AWS</strong> cloud infrastructure was provisioned using <strong>Infrastructure as Code (IaC)</strong> with tools like Terraform, ensuring repeatable and scalable deployments. The architecture supports secure authentication, role-based access control, and efficient analytics pipelines while maintaining high availability and scalability—making it well-suited for real-world healthcare applications.</p>
-
+            <h4><a href="https://github.com/JohnsonEjeh/quickcart">QuickCart</a></h4>
+            <p class="line-clamp">
+              E-commerce backend built with <strong>FastAPI</strong> + <strong>Uvicorn</strong> in a microservices architecture (auth, product, order, payment, notification).
+              Services communicate asynchronously via <strong>Kafka</strong>; security with <strong>python-jose</strong> (JWT) and <strong>passlib[bcrypt]</strong>;
+              data via <strong>SQLAlchemy</strong> → <strong>PostgreSQL</strong>. Fully containerized with <strong>Docker</strong>/<strong>docker-compose</strong>.
             </p>
+            <div class="tech-tags mt-auto">
+              <span class="badge bg-light text-dark">FastAPI</span>
+              <span class="badge bg-light text-dark">Kafka</span>
+              <span class="badge bg-light text-dark">Docker</span>
+              <span class="badge bg-light text-dark">PostgreSQL</span>
+              <span class="badge bg-light text-dark">JWT</span>
+            </div>
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
-          <div class="icon-box iconbox-yellow">
+        <!-- Patient Management -->
+        <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="150">
+          <div class="icon-box iconbox-pink h-100 d-flex flex-column">
             <div class="icon">
               <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,503.46388370962813C374.79870501325706,506.71871716319447,464.8034551963731,527.1746412648533,510.4981551193396,467.86667711651364C555.9287308511215,408.9015244558933,512.6030010748507,327.5744911775523,490.211057578863,256.5855673507754C471.097692560561,195.9906835881958,447.69079081568157,138.11976852964426,395.19560036434837,102.3242989838813C329.3053358748298,57.3949838291264,248.02791733380457,8.279543830951368,175.87071277845988,42.242879143198664C103.41431057327972,76.34704239035025,93.79494320519305,170.9812938413882,81.28167332365135,250.07896920659033C70.17666984294237,320.27484674793965,64.84698225790005,396.69656628748305,111.28512138212992,450.4950937839243C156.20124167950087,502.5303643271138,231.32542653798444,500.4755392045468,300,503.46388370962813"></path>
+                <path fill="#f5f5f5" d="M300,541.5C382.1,545.1,479.9,548.3,526.4,480.5C571.5,414.8,517.5,332.1,496.5,255.1C477.4,185.0,473.6,105.6,413.1,65.2C343.3,18.7,251.2,5.3,175.1,40.6C97.9,76.4,52.0,156.2,36.4,239.8C21.7,319.2,43.8,401.2,96.9,462.0C147.2,519.6,223.6,538.2,300,541.5"></path>
               </svg>
-              <i class="bi bi-database-check"></i>
+              <i class="bi bi-activity"></i>
+            </div>
+            <h4><a href="https://github.com/JohnsonEjeh/patient-management">Patient Management</a></h4>
+            <p class="line-clamp">
+              Distributed healthcare platform with services for <strong>Auth</strong>, <strong>Patient</strong>, <strong>Billing</strong>, and <strong>Analytics</strong>,
+              routed through an <strong>API Gateway</strong>. Inter-service calls via <strong>gRPC</strong> + <strong>Kafka</strong>.
+              Provisioned on <strong>AWS</strong> using <strong>Infrastructure as Code</strong> (Terraform); all services and databases run as <strong>Docker</strong> images.
+            </p>
+            <div class="tech-tags mt-auto">
+              <span class="badge bg-light text-dark">gRPC</span>
+              <span class="badge bg-light text-dark">Kafka</span>
+              <span class="badge bg-light text-dark">AWS</span>
+              <span class="badge bg-light text-dark">Terraform</span>
+              <span class="badge bg-light text-dark">Docker</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fortify Bank API -->
+        <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+          <div class="icon-box iconbox-yellow h-100 d-flex flex-column">
+            <div class="icon">
+              <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#f5f5f5" d="M300,503.5C374.8,506.7,464.8,527.2,510.5,467.9C555.9,408.9,512.6,327.6,490.2,256.6C471.1,196.0,447.7,138.1,395.2,102.3C329.3,57.4,248.0,8.3,175.9,42.2C103.4,76.3,93.8,171.0,81.3,250.1C70.2,320.3,64.8,396.7,111.3,450.5C156.2,502.5,231.3,500.5,300,503.5"></path>
+              </svg>
+              <i class="bi bi-bank2"></i>
             </div>
             <h4><a href="https://github.com/JohnsonEjeh/Fortify-Bank-API">Fortify Bank API</a></h4>
-            <p>Fortify Bank API is a secure and scalable banking backend built with <strong>Java</strong> and <strong>Spring Boot</strong>, designed to support modern digital banking operations. The application follows a clean layered architecture with dedicated packages for configuration, controllers, DTOs, entities, filters, repositories, services, and utilities—ensuring maintainability and clear separation of concerns.  </p>
-            <p>The API provides features such as account management, transaction processing, and role-based access control with JWT authentication. It leverages <strong>Spring Data JPA</strong> for efficient database operations, <strong>Spring Security</strong> for authentication and authorization, and is fully documented for ease of integration. The solution is optimized for enterprise use, with a focus on reliability, extensibility, and secure financial data handling.</p>
-
+            <p class="line-clamp">
+              Secure banking backend with <strong>Java</strong> + <strong>Spring Boot</strong>, layered architecture (config, controller, dto, entity, repository, service).
+              Features include account & transaction flows, <strong>JWT</strong>/<strong>Spring Security</strong> RBAC, and <strong>Spring Data JPA</strong> persistence.
+              Designed for maintainability and enterprise extensibility.
             </p>
+            <div class="tech-tags mt-auto">
+              <span class="badge bg-light text-dark">Java</span>
+              <span class="badge bg-light text-dark">Spring Boot</span>
+              <span class="badge bg-light text-dark">Spring Security</span>
+              <span class="badge bg-light text-dark">JWT</span>
+              <span class="badge bg-light text-dark">JPA</span>
+            </div>
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
-          <div class="icon-box iconbox-red">
+        <!-- Bicycle Theft Prediction -->
+        <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="250">
+          <div class="icon-box iconbox-teal h-100 d-flex flex-column">
             <div class="icon">
               <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,532.3542879108572C369.38199826031484,532.3153073249985,429.10787420159085,491.63046689027357,474.5244479745417,439.17860296908856C522.8885846962883,383.3225815378663,569.1668002868075,314.3205725914397,550.7432151929288,242.7694973846089C532.6665558377875,172.5657663291529,456.2379748765914,142.6223662098291,390.3689995646985,112.34683881706744C326.66090330228417,83.06452184765237,258.84405631176094,53.51806209861945,193.32584062364296,78.48882559362697C121.61183558270385,105.82097193414197,62.805066853699245,167.19869350419734,48.57481801355237,242.6138429142374C34.843463184063346,315.3850353017275,76.69343916112496,383.4422959591041,125.22947124332185,439.3748458443577C170.7312796277747,491.8107796887764,230.57421082200815,532.3932930995766,300,532.3542879108572"></path>
+                <path fill="#f5f5f5" d="M300,566.8C385.7,576.2,478.8,552.9,531.9,484.9C584.6,417.6,582.5,322.7,554.0,242.0C529.2,172.0,465.2,127.7,396.0,100.7C334.2,76.7,269.4,84.6,207.2,107.3C132.9,134.3,41.8,160.0,22.6,236.7C3.3,314.1,72.7,379.2,124.0,440.3C172.9,498.5,224.5,558.5,300,566.8"></path>
               </svg>
-              <i class="bi bi-lock-fill"></i>
+              <i class="bi bi-graph-up-arrow"></i>
             </div>
-            <h4><a href="https://github.com/JohnsonEjeh/Ejehs-Password-Manager">Password Manager</a></h4>
-            <p>I'm delighted to present my Password Manager App, a secure and efficient utility crafted in Python, utilizing classes and object-oriented programming, with a user-friendly interface designed using Tkinter. This project embodies my passion for enhancing online security and user convenience. The app not only securely stores and organizes passwords but also generates strong, unique passwords on demand. Through this project, I've honed my skills in Python development and OOP principles, focusing on user experience and data security. Dive into this project to witness my commitment to building software solutions that protect and simplify digital lives.
-
+            <h4><a href="https://github.com/JohnsonEjeh/bicycle-theft">Bicycle Theft Prediction</a></h4>
+            <p class="line-clamp">
+              <strong>Flask</strong> + <strong>Jinja</strong> app with a reproducible <strong>scikit-learn</strong> pipeline (impute/scale/encode via <em>ColumnTransformer</em>).
+              Trains <strong>Logistic Regression</strong> & <strong>Decision Tree</strong> with <strong>RandomizedSearchCV</strong> and 10-fold CV; persists
+              <code>logistic_regression_model.pkl</code>, <code>decision_tree_model.pkl</code> and <code>preprocessing_pipeline.pkl</code> using <strong>joblib</strong>.
             </p>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
-          <div class="icon-box iconbox-teal">
-            <div class="icon">
-              <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,566.797414625762C385.7384707136149,576.1784315230908,478.7894351017131,552.8928747891023,531.9192734346935,484.94944893311C584.6109503024035,417.5663521118492,582.489472248146,322.67544863468447,553.9536738515405,242.03673114598146C529.1557734026468,171.96086150256528,465.24506316201064,127.66468636344209,395.9583748389544,100.7403814666027C334.2173773831606,76.7482773500951,269.4350130405921,84.62216499799875,207.1952322260088,107.2889140133804C132.92018162631612,134.33871894543012,41.79353780512637,160.00259165414826,22.644507872594943,236.69541883565114C3.319112789854554,314.0945973066697,72.72355303640163,379.243833228382,124.04198916343866,440.3218312028393C172.9286146004772,498.5055451809895,224.45579914871206,558.5317968840102,300,566.797414625762"></path>
-              </svg>
-              <i class="bi bi-list-check"></i>
+            <div class="tech-tags mt-auto">
+              <span class="badge bg-light text-dark">Flask</span>
+              <span class="badge bg-light text-dark">scikit-learn</span>
+              <span class="badge bg-light text-dark">Pandas</span>
+              <span class="badge bg-light text-dark">Jinja</span>
+              <span class="badge bg-light text-dark">ML</span>
             </div>
-            <h4>Bicycle Theft Prediction</h4>
-            <p>A <strong>Flask</strong> + <strong>Jinja</strong> web app that predicts bicycle theft outcomes using open data. The app serves a clean UI for uploads and prediction, then renders results and visuals with Jinja templates and static assets (CSS & GIFs). Under the hood it builds a reproducible <strong>scikit-learn</strong> pipeline: <em>SimpleImputer → StandardScaler → OneHotEncoder</em> via <strong>ColumnTransformer</strong>, followed by tuned models (<strong>Logistic Regression</strong> and <strong>Decision Tree</strong>) selected with <strong>RandomizedSearchCV</strong> and validated via 10-fold cross-validation.</p>
-            <p>The final artifacts—<code>logistic_regression_model.pkl</code>, <code>decision_tree_model.pkl</code>, and <code>preprocessing_pipeline.pkl</code>—are persisted with <strong>joblib</strong> and loaded at inference. Evaluation includes accuracy, precision, recall, F1, and a full classification report. The project demonstrates end-to-end ML engineering: data prep, model selection, metrics, and a lightweight API/UI for real usage—ideal for converting millions of raw records into actionable predictions.</p>
-
           </div>
         </div>
 
       </div>
 
     </div>
-  </section><!-- End Services Section -->
+  </section>
+</main>
 
-</main><!-- End #main -->
+<%- include('partials/footer') %>
 
-    
-
-  <%- include('partials/footer') %>
